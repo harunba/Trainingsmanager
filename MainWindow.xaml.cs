@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Trainingsmanager
 {
@@ -29,7 +17,31 @@ namespace Trainingsmanager
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            var myDiary = new TrainingDiaryData();
+            myDiary.FirstName = Firstnamebox.Text;
+            myDiary.LastName = Lastnamebox.Text;
+            myDiary.Sets = new List<TrainingData>();
+            var mondaySet = mondayTrainingSet.GetTrainingData();
+         
+            myDiary.Sets.Add(mondaySet);
+            var tuesdaySet = tuesdayTrainingSet.GetTrainingData();
+         
+            myDiary.Sets.Add(tuesdaySet);
+            var wednesdayset= wednesdayTrainingSet.GetTrainingData();
+ 
+            myDiary.Sets.Add(wednesdayset);
+            var thursdaySet = thursdayTrainingSet.GetTrainingData();
+    
+            myDiary.Sets.Add(thursdaySet);
+            var fridaySet = fridayTrainingSet.GetTrainingData();
+        
+            myDiary.Sets.Add(fridaySet);
+            var saturdaySet = saturdayTrainingSet.GetTrainingData();
+ 
+            myDiary.Sets.Add(saturdaySet);
+            var sundaySet = sundayTrainingSet.GetTrainingData();
+ 
+            myDiary.Sets.Add(sundaySet);
         }
     }
 }

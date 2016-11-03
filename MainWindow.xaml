@@ -28,7 +28,7 @@
             <Label x:Name="toLabel" Content="Bis:" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="46"/>
             <DatePicker Margin="0,0,0,75" />
             <Label x:Name="label1" Content="Name:" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="46"/>
-            <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="Firstnamebox" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="100"/>
             <Label x:Name="label2" Content="Vorname:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="46">
                 <Label.RenderTransform>
                     <TransformGroup>
@@ -39,17 +39,18 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <RichTextBox x:Name="richTextBox1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="100"/>
+            <TextBox x:Name="Lastnamebox" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="100"/>
             <Button Width="100" Content="Speichern"  Height="25" VerticalAlignment="Top" Click="Button_Click" />
         </StackPanel>
         <ScrollViewer Grid.Row="2">
             <StackPanel Grid.Row="2" >
-                <local:TrainingSet DayName="Montag"/>
-                <local:TrainingSet DayName="Dienstag"/>
-                <local:TrainingSet/>
-                <local:TrainingSet/>
-                <local:TrainingSet/>
-                <local:TrainingSet/>
+                <local:TrainingSet x:Name="mondayTrainingSet" DayName="Montag"/>
+                <local:TrainingSet x:Name="tuesdayTrainingSet" DayName="Dienstag"/>
+                <local:TrainingSet x:Name="wednesdayTrainingSet" DayName="Mittwoch" />
+                <local:TrainingSet x:Name="thursdayTrainingSet" DayName="Donnerstag"/>
+                <local:TrainingSet x:Name="fridayTrainingSet" DayName="Freitag"/>
+                <local:TrainingSet x:Name="saturdayTrainingSet" DayName="Samstag"/>
+                <local:TrainingSet x:Name="sundayTrainingSet" DayName="Sonntag"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>

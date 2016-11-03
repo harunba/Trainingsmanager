@@ -34,6 +34,13 @@ namespace Trainingsmanager
             {
                 dayLabel.Content = value;
             }}
-      
+
+        public TrainingData GetTrainingData()
+        {
+            var myTrainingData = new TrainingData();
+            return myTrainingData;
+        }
     }
+
+    
 }

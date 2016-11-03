@@ -24,5 +24,11 @@ namespace Trainingsmanager
         {
             InitializeComponent();
         }
+
+        public ExerciseData GetExerciseData()
+        {
+            var myExerciseData = new ExerciseData();
+            return myExerciseData;
+        }
     }
 }
