@@ -25,47 +25,9 @@ namespace Trainingsmanager
             InitializeComponent();
         }
 
-        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+       
 
-        }
-
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void comboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void listBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void Schwerpunkt_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void listBox_SelectionChanged_2(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void richTextBox2_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void richTextBox7_TextChanged(object sender, TextChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }

@@ -4,17 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Trainingsmanager"
-             mc:Ignorable="d" Height="150" Width="700">
-    <Grid Height="150" VerticalAlignment="Top">
+             mc:Ignorable="d" Height="80" Width="550">
+    <Grid Height="80" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Label x:Name="label" Grid.Row="0" Content="Name" HorizontalAlignment="Center" Margin="5,5,5,0" VerticalAlignment="Center" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="label" Content="Name" HorizontalAlignment="Center" Margin="5" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             <Label x:Name="label1" Content="Gewicht" HorizontalAlignment="Center" Margin="5,5,5,0" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center"/>
-            <Label x:Name="label2" Content="Sets" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top"/>
-            <Label x:Name="label3" Content="Wiederholungen" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" RenderTransformOrigin="0.574,-0.303"/>
+            <Label x:Name="label2" Content="Sets" HorizontalAlignment="Left" Margin="5,5,5,0" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center"/>
+            <Label x:Name="label3" Content="Wiederholungen" HorizontalAlignment="Center" Margin="5,5,5,0" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="5" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />

@@ -24,5 +24,16 @@ namespace Trainingsmanager
         {
             InitializeComponent();
         }
+
+        public string DayName {
+            get
+            {
+                return (string)dayLabel.Content;
+            }
+            set
+            {
+                dayLabel.Content = value;
+            }}
+      
     }
 }

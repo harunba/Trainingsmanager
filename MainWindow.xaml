@@ -5,9 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trainingsmanager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="642.45" Width="1599">
-    <Grid Margin="-57,-230,-51,-110">
-        <Label x:Name="label" Content="Trainingstagebuch" HorizontalAlignment="Left" Margin="722,275,0,0" VerticalAlignment="Top" FontSize="26.667" RenderTransformOrigin="0.5,0.5" Height="94" Width="236">
+        Title="MainWindow" Height="642.45" Width="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Trainingstagebuch" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="26.667" Height="94" Width="236">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,59 +22,35 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="label1" Content="Name:" HorizontalAlignment="Left" Margin="671,362,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="46">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.289"/>
-                    <RotateTransform Angle="-0.136"/>
-                    <TranslateTransform X="0.746" Y="4.943"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="24" Margin="733,365,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5">
-            <RichTextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="0.371"/>
-                    <RotateTransform Angle="0.174"/>
-                    <TranslateTransform X="0.676" Y="2.513"/>
-                </TransformGroup>
-            </RichTextBox.RenderTransform>
-            <FlowDocument/>
-        </RichTextBox>
-        <Label x:Name="label2" Content="Vorname:" HorizontalAlignment="Left" Margin="843,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="46">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="1.09"/>
-                    <RotateTransform Angle="-0.992"/>
-                    <TranslateTransform X="1.096" Y="-1.563"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <RichTextBox x:Name="richTextBox1" HorizontalAlignment="Left" Height="25" Margin="909,371,0,0" VerticalAlignment="Top" Width="100" TextChanged="richTextBox1_TextChanged" RenderTransformOrigin="0.5,0.5">
-            <RichTextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="0.262"/>
-                    <RotateTransform Angle="-0.271"/>
-                    <TranslateTransform X="0.944" Y="-5.736"/>
-                </TransformGroup>
-            </RichTextBox.RenderTransform>
-            <FlowDocument/>
-        </RichTextBox>
-
-        <StackPanel Margin="52,88,-51,-89">
-            <local:TrainingSet/>
-            <local:TrainingSet/>
-            <local:TrainingSet/>
-            <local:TrainingSet/>
-            <local:TrainingSet/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Label x:Name="fromLabel" Content="Von:" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="46"/>
+            <DatePicker Margin="0,0,0,75" />
+            <Label x:Name="toLabel" Content="Bis:" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="46"/>
+            <DatePicker Margin="0,0,0,75" />
+            <Label x:Name="label1" Content="Name:" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="46"/>
+            <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5"/>
+            <Label x:Name="label2" Content="Vorname:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="46">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="1.09"/>
+                        <RotateTransform Angle="-0.992"/>
+                        <TranslateTransform X="1.096" Y="-1.563"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <RichTextBox x:Name="richTextBox1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="100"/>
+            <Button Width="100" Content="Speichern"  Height="25" VerticalAlignment="Top" Click="Button_Click" />
         </StackPanel>
-        <Label x:Name="label18" Content="Freitag:" HorizontalAlignment="Left" Margin="188,655,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label19" Content="Samstag:" HorizontalAlignment="Left" Margin="188,714,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label20" Content="Sonntag:" HorizontalAlignment="Left" Margin="189,770,0,0" VerticalAlignment="Top"/>
-
+        <ScrollViewer Grid.Row="2">
+            <StackPanel Grid.Row="2" >
+                <local:TrainingSet DayName="Montag"/>
+                <local:TrainingSet DayName="Dienstag"/>
+                <local:TrainingSet/>
+                <local:TrainingSet/>
+                <local:TrainingSet/>
+                <local:TrainingSet/>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
