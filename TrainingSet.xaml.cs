@@ -38,6 +38,24 @@ namespace Trainingsmanager
         public TrainingData GetTrainingData()
         {
             var myTrainingData = new TrainingData();
+            myTrainingData.DayName = DayName;
+            var mySelectedItem = (ComboBoxItem)focusComboBox.SelectedItem;
+            if(mySelectedItem != null)
+            {
+                myTrainingData.Focus = (string)mySelectedItem.Content;
+            }
+            
+            myTrainingData.Exercises = new List<ExerciseData>();
+            var firstExerciseData = firstExercise.GetExerciseData();
+            myTrainingData.Exercises.Add(firstExerciseData);
+            var secondExerciseData = secondExercise.GetExerciseData();
+            myTrainingData.Exercises.Add(secondExerciseData);
+            var thirdExerciseData = thirdExercise.GetExerciseData();
+            myTrainingData.Exercises.Add(thirdExerciseData);
+            var fourthExerciseData = fourthExercise.GetExerciseData();
+            myTrainingData.Exercises.Add(fourthExerciseData);
+            var fifthExerciseData = fifthExercise.GetExerciseData();
+            myTrainingData.Exercises.Add(fifthExerciseData);
             return myTrainingData;
         }
     }

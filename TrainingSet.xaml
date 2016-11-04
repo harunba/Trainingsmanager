@@ -10,7 +10,7 @@
     <StackPanel Orientation="Horizontal">
         <Label x:Name="dayLabel" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-        <ComboBox x:Name="listBox" HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="100">
+        <ComboBox x:Name="focusComboBox" HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="100">
             <ComboBoxItem Content="Brust"/>
             <ComboBoxItem Content="Arme"/>
             <ComboBoxItem Content="Rücken"/>
@@ -18,11 +18,11 @@
             <ComboBoxItem Content="Beine"/>
         </ComboBox>
         <StackPanel Margin="10,5">
-            <my:Exercise Margin="5"/>
-            <my:Exercise Margin="5"/>
-            <my:Exercise Margin="5"/>
-            <my:Exercise Margin="5"/>
-            <my:Exercise Margin="5"/>
+            <my:Exercise x:Name="firstExercise" Margin="5"/>
+            <my:Exercise x:Name="secondExercise" Margin="5"/>
+            <my:Exercise x:Name="thirdExercise" Margin="5"/>
+            <my:Exercise x:Name="fourthExercise" Margin="5"/>
+            <my:Exercise x:Name="fifthExercise" Margin="5"/>
         </StackPanel>
        
     </StackPanel>

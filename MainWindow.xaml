@@ -29,7 +29,7 @@
             <DatePicker Margin="0,0,0,75" />
             <Label x:Name="label1" Content="Name:" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="46"/>
             <TextBox x:Name="Firstnamebox" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="100"/>
-            <Label x:Name="label2" Content="Vorname:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="46">
+            <Label x:Name="label2" Content="Vorname:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="46">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

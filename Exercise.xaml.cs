@@ -28,6 +28,11 @@ namespace Trainingsmanager
         public ExerciseData GetExerciseData()
         {
             var myExerciseData = new ExerciseData();
+            myExerciseData.Name = exerciseName.Text;
+            myExerciseData.Reps = exerciseReps.Text;
+            myExerciseData.Sets = exerciseSets.Text;
+            myExerciseData.Weight = exerciseWeight.Text;
+   
             return myExerciseData;
         }
     }
