@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows;
 
 namespace Trainingsmanager
@@ -54,5 +55,26 @@ namespace Trainingsmanager
             }
             
         }
+
+        private void Button_Click1(object reciever, RoutedEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            var isChosen = openFileDialog.ShowDialog();
+            if (isChosen == true) {
+                var content = File.ReadAllText(openFileDialog.FileName);
+                var myDiary = JsonConvert.DeserializeObject<TrainingDiaryData>(content);
+                Firstnamebox.Text = myDiary.FirstName;
+                mondayTrainingSet.SetTrainingData(myDiary.Sets[0]);
+                tuesdayTrainingSet.SetTrainingData(myDiary.Sets[1]);
+                wednesdayTrainingSet.SetTrainingData(myDiary.Sets[2]);
+                thursdayTrainingSet.SetTrainingData(myDiary.Sets[3]);
+                fridayTrainingSet.SetTrainingData(myDiary.Sets[4]);
+                saturdayTrainingSet.SetTrainingData(myDiary.Sets[5]);
+                sundayTrainingSet.SetTrainingData(myDiary.Sets[6]);
+
+
+            }
+        }
     }
+   
 }

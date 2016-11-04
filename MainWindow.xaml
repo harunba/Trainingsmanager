@@ -41,6 +41,7 @@
             </Label>
             <TextBox x:Name="Lastnamebox" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="100"/>
             <Button Width="100" Content="Speichern"  Height="25" VerticalAlignment="Top" Click="Button_Click" />
+            <Button x:Name="button1" Content="Laden" Width="125" Margin="0,0,0,75"  Click="Button_Click1" />
         </StackPanel>
         <ScrollViewer Grid.Row="2">
             <StackPanel Grid.Row="2" >
@@ -51,7 +52,9 @@
                 <local:TrainingSet x:Name="fridayTrainingSet" DayName="Freitag"/>
                 <local:TrainingSet x:Name="saturdayTrainingSet" DayName="Samstag"/>
                 <local:TrainingSet x:Name="sundayTrainingSet" DayName="Sonntag"/>
+                <Button x:Name="button" Content="Button" Width="75"/>
             </StackPanel>
         </ScrollViewer>
+        <ProgressBar HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>

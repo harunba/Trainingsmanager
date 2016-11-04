@@ -58,6 +58,17 @@ namespace Trainingsmanager
             myTrainingData.Exercises.Add(fifthExerciseData);
             return myTrainingData;
         }
+
+        public void SetTrainingData(TrainingData trainingData)
+        {
+            firstExercise.SetExercise(trainingData.Exercises[0]);
+            secondExercise.SetExercise(trainingData.Exercises[1]);
+            thirdExercise.SetExercise(trainingData.Exercises[2]);
+            fourthExercise.SetExercise(trainingData.Exercises[3]);
+            fifthExercise.SetExercise(trainingData.Exercises[4]);
+
+
+        }
     }
 
     

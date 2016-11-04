@@ -35,5 +35,13 @@ namespace Trainingsmanager
    
             return myExerciseData;
         }
+
+        public void SetExercise(ExerciseData exerciseData)
+        {
+            exerciseName.Text = exerciseData.Name;
+            exerciseReps.Text = exerciseData.Reps;
+            exerciseSets.Text = exerciseData.Sets;
+            exerciseWeight.Text = exerciseData.Weight;
+        }
     }
 }
