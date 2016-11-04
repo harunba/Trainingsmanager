@@ -66,8 +66,16 @@ namespace Trainingsmanager
             thirdExercise.SetExercise(trainingData.Exercises[2]);
             fourthExercise.SetExercise(trainingData.Exercises[3]);
             fifthExercise.SetExercise(trainingData.Exercises[4]);
-
-
+            DayName = trainingData.DayName;
+            foreach(var item in focusComboBox.Items)
+            {
+                var comboBoxItem = (ComboBoxItem)item;
+                if(comboBoxItem != null && comboBoxItem.Content.Equals(trainingData.Focus))
+                {
+                    focusComboBox.SelectedItem = comboBoxItem;
+                    break;
+                }
+            }
         }
     }
 

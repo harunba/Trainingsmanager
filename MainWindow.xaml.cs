@@ -64,6 +64,7 @@ namespace Trainingsmanager
                 var content = File.ReadAllText(openFileDialog.FileName);
                 var myDiary = JsonConvert.DeserializeObject<TrainingDiaryData>(content);
                 Firstnamebox.Text = myDiary.FirstName;
+                Lastnamebox.Text = myDiary.LastName;
                 mondayTrainingSet.SetTrainingData(myDiary.Sets[0]);
                 tuesdayTrainingSet.SetTrainingData(myDiary.Sets[1]);
                 wednesdayTrainingSet.SetTrainingData(myDiary.Sets[2]);
